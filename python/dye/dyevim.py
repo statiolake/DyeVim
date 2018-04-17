@@ -116,7 +116,7 @@ class DyeVim( object ):
 
 
     def _SetCurrentWId( self ):
-        if not vim.current.window.vars.has_key( DV_UNIQUE_WID_VAR ):
+        if not vim.current.window.vars.contains( DV_UNIQUE_WID_VAR ):
             vim.current.window.vars[ DV_UNIQUE_WID_VAR ] = self._nextUniqueWId
             self._nextUniqueWId += 1
 
